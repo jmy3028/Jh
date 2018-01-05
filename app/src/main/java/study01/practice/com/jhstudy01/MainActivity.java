@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         mMainDataList = new ArrayList<>();
         addList("농구 점수판 앱","Layout 구성,Button 사용법", ScoreboardActivity.class);
+        addList("가위바위보 앱","메서드 사용,기본 if문 사용", ScoreboardActivity.class);
 
 
         MainAdapter mainAdapter = new MainAdapter(mMainDataList);
