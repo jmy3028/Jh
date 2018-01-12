@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ScoreboardActivity" />
-        <activity android:name=".activity.RockPaperScissorsActivity"></activity>
+        <activity android:name=".activity.RockPaperScissorsActivity" />
+        <activity android:name=".activity.login01.Login01Activity" />
+        <activity android:name=".activity.login01.LoginResultActivity"></activity>
     </application>
 
 </manifest>

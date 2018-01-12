@@ -17,6 +17,7 @@ import java.util.Map;
 
 import study01.practice.com.jhstudy01.activity.RockPaperScissorsActivity;
 import study01.practice.com.jhstudy01.activity.ScoreboardActivity;
+import study01.practice.com.jhstudy01.activity.login01.Login01Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.main_list_view);
 
         mMainDataList = new ArrayList<>();
-        addList("농구 점수판 앱","Layout 구성,Button 사용법", ScoreboardActivity.class);
-        addList("가위바위보 앱","메서드 사용,기본 if문 사용", RockPaperScissorsActivity.class);
+        addList("농구 점수판 앱", "Layout 구성,Button 사용법", ScoreboardActivity.class);
+        addList("가위바위보 앱", "메서드 사용,기본 if문 사용", RockPaperScissorsActivity.class);
+        addList("Login01 앱", "기본적인 intent 사용(데이터값 주고 받기)", Login01Activity.class);
 
 
         MainAdapter mainAdapter = new MainAdapter(mMainDataList);
@@ -42,26 +44,25 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Map<String,Object> map = (Map<String,Object>) adapterView.getItemAtPosition(i);
+                Map<String, Object> map = (Map<String, Object>) adapterView.getItemAtPosition(i);
                 Intent intent = (Intent) map.get("intent");
                 startActivity(intent);
 
             }
         });
-
     }
 
-    private void addList(String title, String desc, Class className){
-        Map<String,Object> map = new HashMap<>();
-        map.put("title",title);
-        map.put("desc",desc);
-        map.put("intent",new Intent(this,className));
+    private void addList(String title, String desc, Class className) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("title", title);
+        map.put("desc", desc);
+        map.put("intent", new Intent(this, className));
         mMainDataList.add(map);
     }
 
     private class MainAdapter extends BaseAdapter {
 
-        private ArrayList<Map<String,Object>> mMainDataList;
+        private ArrayList<Map<String, Object>> mMainDataList;
 
         public MainAdapter(ArrayList<Map<String, Object>> mMainDataList) {
             this.mMainDataList = mMainDataList;
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            if(view == null){
+            if (view == null) {
                 view = LayoutInflater.from(viewGroup.getContext())
                         .inflate(R.layout.item_main_list, viewGroup, false);
             }
