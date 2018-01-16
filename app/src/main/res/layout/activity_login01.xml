@@ -7,5 +7,24 @@
     android:orientation="vertical"
     tools:context="study01.practice.com.jhstudy01.activity.login01.Login01Activity">
 
+    <EditText
+        android:id="@+id/id_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id를 적어 주세요"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password를 적어 주세요"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인" />
 
 </LinearLayout>

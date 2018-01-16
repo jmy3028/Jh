@@ -19,7 +19,9 @@
         <activity android:name=".activity.ScoreboardActivity" />
         <activity android:name=".activity.RockPaperScissorsActivity" />
         <activity android:name=".activity.login01.Login01Activity" />
-        <activity android:name=".activity.login01.LoginResultActivity"></activity>
+        <activity android:name=".activity.login01.LoginResultActivity" />
+        <activity android:name=".activity.login02.Login02Activity" />
+        <activity android:name=".activity.login02.Login02ResultActivity"></activity>
     </application>
 
 </manifest>
